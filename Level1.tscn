@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://8vlmf5acdexo"]
+[gd_scene load_steps=5 format=3 uid="uid://8vlmf5acdexo"]
 
 [ext_resource type="Texture2D" uid="uid://biwond464pw3f" path="res://Sprites/Tiles/tiles_packed.png" id="1_35ais"]
-[ext_resource type="Script" path="res://player.gd" id="2_g4qkg"]
-[ext_resource type="Texture2D" uid="uid://c3nvqgsbwhv3a" path="res://Sprites/Characters/character_0004.png" id="3_vnsv4"]
+[ext_resource type="PackedScene" uid="uid://dxay3ypgbkopj" path="res://scenes/player.tscn" id="2_uxbli"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ei6qr"]
 texture = ExtResource("1_35ais")
@@ -75,12 +74,6 @@ texture_region_size = Vector2i(18, 18)
 19:0/0 = 0
 19:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 19:0/0/physics_layer_0/angular_velocity = 0.0
-20:0/0 = 0
-20:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-20:0/0/physics_layer_0/angular_velocity = 0.0
-21:0/0 = 0
-21:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-21:0/0/physics_layer_0/angular_velocity = 0.0
 0:1/0 = 0
 0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:1/0/physics_layer_0/angular_velocity = 0.0
@@ -149,12 +142,6 @@ texture_region_size = Vector2i(18, 18)
 19:1/0 = 0
 19:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 19:1/0/physics_layer_0/angular_velocity = 0.0
-20:1/0 = 0
-20:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-20:1/0/physics_layer_0/angular_velocity = 0.0
-21:1/0 = 0
-21:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-21:1/0/physics_layer_0/angular_velocity = 0.0
 0:2/0 = 0
 0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:2/0/physics_layer_0/angular_velocity = 0.0
@@ -223,12 +210,6 @@ texture_region_size = Vector2i(18, 18)
 19:2/0 = 0
 19:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 19:2/0/physics_layer_0/angular_velocity = 0.0
-20:2/0 = 0
-20:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-20:2/0/physics_layer_0/angular_velocity = 0.0
-21:2/0 = 0
-21:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-21:2/0/physics_layer_0/angular_velocity = 0.0
 0:3/0 = 0
 0:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:3/0/physics_layer_0/angular_velocity = 0.0
@@ -297,12 +278,6 @@ texture_region_size = Vector2i(18, 18)
 19:3/0 = 0
 19:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 19:3/0/physics_layer_0/angular_velocity = 0.0
-20:3/0 = 0
-20:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-20:3/0/physics_layer_0/angular_velocity = 0.0
-21:3/0 = 0
-21:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-21:3/0/physics_layer_0/angular_velocity = 0.0
 0:4/0 = 0
 0:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:4/0/physics_layer_0/angular_velocity = 0.0
@@ -375,12 +350,6 @@ texture_region_size = Vector2i(18, 18)
 19:4/0 = 0
 19:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 19:4/0/physics_layer_0/angular_velocity = 0.0
-20:4/0 = 0
-20:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-20:4/0/physics_layer_0/angular_velocity = 0.0
-21:4/0 = 0
-21:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-21:4/0/physics_layer_0/angular_velocity = 0.0
 0:5/0 = 0
 0:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:5/0/physics_layer_0/angular_velocity = 0.0
@@ -448,12 +417,6 @@ texture_region_size = Vector2i(18, 18)
 19:5/0 = 0
 19:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 19:5/0/physics_layer_0/angular_velocity = 0.0
-20:5/0 = 0
-20:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-20:5/0/physics_layer_0/angular_velocity = 0.0
-21:5/0 = 0
-21:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-21:5/0/physics_layer_0/angular_velocity = 0.0
 0:6/0 = 0
 0:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:6/0/physics_layer_0/angular_velocity = 0.0
@@ -522,12 +485,6 @@ texture_region_size = Vector2i(18, 18)
 19:6/0 = 0
 19:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 19:6/0/physics_layer_0/angular_velocity = 0.0
-20:6/0 = 0
-20:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-20:6/0/physics_layer_0/angular_velocity = 0.0
-21:6/0 = 0
-21:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-21:6/0/physics_layer_0/angular_velocity = 0.0
 0:7/0 = 0
 0:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:7/0/physics_layer_0/angular_velocity = 0.0
@@ -592,12 +549,6 @@ texture_region_size = Vector2i(18, 18)
 19:7/0 = 0
 19:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 19:7/0/physics_layer_0/angular_velocity = 0.0
-20:7/0 = 0
-20:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-20:7/0/physics_layer_0/angular_velocity = 0.0
-21:7/0 = 0
-21:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-21:7/0/physics_layer_0/angular_velocity = 0.0
 0:8/0 = 0
 0:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:8/0/physics_layer_0/angular_velocity = 0.0
@@ -658,86 +609,11 @@ texture_region_size = Vector2i(18, 18)
 19:8/0 = 0
 19:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 19:8/0/physics_layer_0/angular_velocity = 0.0
-20:8/0 = 0
-20:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-20:8/0/physics_layer_0/angular_velocity = 0.0
-21:8/0 = 0
-21:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-21:8/0/physics_layer_0/angular_velocity = 0.0
-0:9/0 = 0
-0:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:9/0/physics_layer_0/angular_velocity = 0.0
-1:9/0 = 0
-1:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-1:9/0/physics_layer_0/angular_velocity = 0.0
-2:9/0 = 0
-2:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-2:9/0/physics_layer_0/angular_velocity = 0.0
-3:9/0 = 0
-3:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-3:9/0/physics_layer_0/angular_velocity = 0.0
-4:9/0 = 0
-4:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-4:9/0/physics_layer_0/angular_velocity = 0.0
-5:9/0 = 0
-5:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-5:9/0/physics_layer_0/angular_velocity = 0.0
-6:9/0 = 0
-6:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-6:9/0/physics_layer_0/angular_velocity = 0.0
-7:9/0 = 0
-7:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-7:9/0/physics_layer_0/angular_velocity = 0.0
-8:9/0 = 0
-8:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-8:9/0/physics_layer_0/angular_velocity = 0.0
-9:9/0 = 0
-9:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-9:9/0/physics_layer_0/angular_velocity = 0.0
-10:9/0 = 0
-10:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-10:9/0/physics_layer_0/angular_velocity = 0.0
-11:9/0 = 0
-11:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-11:9/0/physics_layer_0/angular_velocity = 0.0
-12:9/0 = 0
-12:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-12:9/0/physics_layer_0/angular_velocity = 0.0
-13:9/0 = 0
-13:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-13:9/0/physics_layer_0/angular_velocity = 0.0
-14:9/0 = 0
-14:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-14:9/0/physics_layer_0/angular_velocity = 0.0
-15:9/0 = 0
-15:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-15:9/0/physics_layer_0/angular_velocity = 0.0
-16:9/0 = 0
-16:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-16:9/0/physics_layer_0/angular_velocity = 0.0
-17:9/0 = 0
-17:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-17:9/0/physics_layer_0/angular_velocity = 0.0
-18:9/0 = 0
-18:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-18:9/0/physics_layer_0/angular_velocity = 0.0
-19:9/0 = 0
-19:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-19:9/0/physics_layer_0/angular_velocity = 0.0
-20:9/0 = 0
-20:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-20:9/0/physics_layer_0/angular_velocity = 0.0
-21:9/0 = 0
-21:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-21:9/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSet" id="TileSet_s7463"]
 tile_size = Vector2i(18, 18)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_ei6qr")
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ckgfy"]
-height = 24.0
 
 [node name="Main" type="Node2D"]
 
@@ -746,17 +622,4 @@ tile_set = SubResource("TileSet_s7463")
 format = 2
 layer_0/tile_data = PackedInt32Array(65534, 131072, 1, 65535, 131072, 1, 0, 131072, 1, 1, 131072, 1, 2, 131072, 1, 3, 131072, 1, 4, 131072, 1, 5, 131072, 1, 131070, 131072, 6, 131071, 131072, 6, 65536, 131072, 6, 65537, 131072, 6, 65538, 131072, 6, 65539, 131072, 6, 65540, 131072, 6, 65541, 131072, 6, 65542, 131072, 6, 6, 131072, 6, 131069, 131072, 6, -65530, 65536, 6, -65529, 196608, 6, 7, 196608, 6, 65543, 196608, 6, 131079, 196608, 6, 196614, 131072, 6, 196615, 196608, 6, 262151, 196608, 6, 262150, 131072, 6, 131078, 131072, 6, 131077, 131072, 6, 131076, 131072, 6, 131075, 131072, 6, 131074, 131072, 6, 131073, 131072, 6, 131072, 131072, 6, 196607, 131072, 6, 196606, 131072, 6, 196605, 131072, 6, 262141, 131072, 6, 262142, 131072, 6, 262143, 131072, 6, 196608, 131072, 6, 196609, 131072, 6, 196610, 131072, 6, 196611, 131072, 6, 196612, 131072, 6, 196613, 131072, 6, 262149, 131072, 6, 262148, 131072, 6, 262147, 131072, 6, 262146, 131072, 6, 262145, 131072, 6, 262144, 131072, 6, 262140, 65536, 6, 327676, 65536, 6, 327677, 131072, 6, 327678, 131072, 6, 327679, 131072, 6, 196604, 65536, 6, 131068, 65536, 6, -65524, 65536, 6, -65523, 131072, 6, -65522, 131072, 6, -65521, 196608, 6, 15, 196608, 6, 65551, 196608, 6, 65550, 131072, 6, 131086, 131072, 6, 131085, 131072, 6, 65549, 131072, 6, 65548, 65536, 6, 12, 65536, 6, 13, 131072, 6, 14, 131072, 6, 131087, 196608, 6, 131084, 65536, 6, 65533, 131072, 1, 65532, 65536, 1, -131065, 196608, 1, -131066, 65536, 1, -131060, 65536, 1, -131059, 131072, 1, -131058, 131072, 1, -131057, 196608, 1, -131049, 851968, 6, -131048, 851968, 6, -131047, 851968, 6, -131046, 851968, 6, -131045, 851968, 6, -131044, 917504, 5, -196580, 851968, 4, -196579, 851968, 6, -196578, 851968, 6, -196577, 851968, 6, -196576, 917504, 4, -131040, 983040, 5, -65503, 851968, 6, -65502, 851968, 6, -65501, 851968, 6, -65500, 851968, 6, -65496, 917504, 6, -65497, 851968, 6, -65498, 851968, 6, -65499, 851968, 6, -65504, 851968, 5, -131052, 851968, 6, -131053, 786432, 6, -131050, 851968, 6, -131051, 851968, 6)
 
-[node name="Player" type="CharacterBody2D" parent="."]
-script = ExtResource("2_g4qkg")
-
-[node name="Character0004" type="Sprite2D" parent="Player"]
-position = Vector2(0, -12)
-texture = ExtResource("3_vnsv4")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2(0, -12)
-shape = SubResource("CapsuleShape2D_ckgfy")
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(1, -11)
-zoom = Vector2(3, 3)
+[node name="Player" parent="." instance=ExtResource("2_uxbli")]
