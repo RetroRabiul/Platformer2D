@@ -29,6 +29,9 @@ func _physics_process(delta):
 		game_over()
 
 func  game_over():
+	call_deferred("reload")
+
+func reload():
 	get_tree().reload_current_scene()
 
 func add_score (amount):

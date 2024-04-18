@@ -1,7 +1,7 @@
 extends Area2D
 
-var bob_height : float = .50
-var bob_speed : float = .50
+var bob_height : float = 5.0
+var bob_speed : float = 5.0
 
 @onready var start_y : float = global_position.y
 var t : float = 0.0
