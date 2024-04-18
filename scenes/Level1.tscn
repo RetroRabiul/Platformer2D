@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://8vlmf5acdexo"]
+[gd_scene load_steps=10 format=3 uid="uid://8vlmf5acdexo"]
 
 [ext_resource type="Texture2D" uid="uid://biwond464pw3f" path="res://Sprites/Tiles/tiles_packed.png" id="1_35ais"]
 [ext_resource type="PackedScene" uid="uid://dxay3ypgbkopj" path="res://scenes/player.tscn" id="2_uxbli"]
 [ext_resource type="PackedScene" uid="uid://cyri6gs3mfoo1" path="res://scenes/enemy.tscn" id="3_kck25"]
 [ext_resource type="PackedScene" uid="uid://iifkl3ncdkmy" path="res://scenes/spikes.tscn" id="4_b4vot"]
+[ext_resource type="Script" path="res://scripts/coin.gd" id="5_ds3gp"]
+[ext_resource type="Texture2D" uid="uid://ydbe1tyhvygu" path="res://Sprites/Objects/tile_0151.png" id="5_lrfvy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ei6qr"]
 texture = ExtResource("1_35ais")
@@ -617,6 +619,9 @@ tile_size = Vector2i(18, 18)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_ei6qr")
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_tramy"]
+radius = 7.07107
+
 [node name="Main" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -625,6 +630,7 @@ format = 2
 layer_0/tile_data = PackedInt32Array(65534, 131072, 1, 65535, 131072, 1, 0, 131072, 1, 1, 131072, 1, 2, 131072, 1, 3, 131072, 1, 4, 131072, 1, 5, 131072, 1, 131070, 131072, 6, 131071, 131072, 6, 65536, 131072, 6, 65537, 131072, 6, 65538, 131072, 6, 65539, 131072, 6, 65540, 131072, 6, 65541, 131072, 6, 65542, 131072, 6, 6, 131072, 6, 131069, 131072, 6, -65530, 65536, 6, -65529, 196608, 6, 7, 196608, 6, 65543, 196608, 6, 131079, 196608, 6, 196614, 131072, 6, 196615, 196608, 6, 262151, 196608, 6, 262150, 131072, 6, 131078, 131072, 6, 131077, 131072, 6, 131076, 131072, 6, 131075, 131072, 6, 131074, 131072, 6, 131073, 131072, 6, 131072, 131072, 6, 196607, 131072, 6, 196606, 131072, 6, 196605, 131072, 6, 262141, 131072, 6, 262142, 131072, 6, 262143, 131072, 6, 196608, 131072, 6, 196609, 131072, 6, 196610, 131072, 6, 196611, 131072, 6, 196612, 131072, 6, 196613, 131072, 6, 262149, 131072, 6, 262148, 131072, 6, 262147, 131072, 6, 262146, 131072, 6, 262145, 131072, 6, 262144, 131072, 6, 262140, 65536, 6, 327676, 65536, 6, 327677, 131072, 6, 327678, 131072, 6, 327679, 131072, 6, 196604, 65536, 6, 131068, 65536, 6, -65524, 65536, 6, -65523, 131072, 6, -65522, 131072, 6, -65521, 196608, 6, 15, 196608, 6, 65551, 196608, 6, 65550, 131072, 6, 131086, 131072, 6, 131085, 131072, 6, 65549, 131072, 6, 65548, 65536, 6, 12, 65536, 6, 13, 131072, 6, 14, 131072, 6, 131087, 196608, 6, 131084, 65536, 6, 65533, 131072, 1, 65532, 65536, 1, -131065, 196608, 1, -131066, 65536, 1, -131060, 65536, 1, -131059, 131072, 1, -131058, 131072, 1, -131057, 196608, 1, -131049, 851968, 6, -131048, 851968, 6, -131047, 851968, 6, -131046, 851968, 6, -131045, 851968, 6, -131044, 917504, 5, -196580, 851968, 4, -196579, 851968, 6, -196578, 851968, 6, -196577, 851968, 6, -196576, 917504, 4, -131040, 983040, 5, -65503, 851968, 6, -65502, 851968, 6, -65501, 851968, 6, -65500, 851968, 6, -65496, 917504, 6, -65497, 851968, 6, -65498, 851968, 6, -65499, 851968, 6, -65504, 851968, 5, -131052, 851968, 6, -131053, 786432, 6, -131050, 851968, 6, -131051, 851968, 6)
 
 [node name="Player" parent="." instance=ExtResource("2_uxbli")]
+position = Vector2(0, -14)
 
 [node name="Enemy" parent="." instance=ExtResource("3_kck25")]
 
@@ -635,3 +641,13 @@ position = Vector2(183, -36)
 position = Vector2(315, -25)
 
 [node name="Spikes" parent="." instance=ExtResource("4_b4vot")]
+
+[node name="Coin" type="Area2D" parent="."]
+position = Vector2(-38, -15)
+script = ExtResource("5_ds3gp")
+
+[node name="Sprite" type="Sprite2D" parent="Coin"]
+texture = ExtResource("5_lrfvy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Coin"]
+shape = SubResource("CircleShape2D_tramy")
