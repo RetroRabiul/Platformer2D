@@ -1,11 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://8vlmf5acdexo"]
+[gd_scene load_steps=8 format=3 uid="uid://8vlmf5acdexo"]
 
 [ext_resource type="Texture2D" uid="uid://biwond464pw3f" path="res://Sprites/Tiles/tiles_packed.png" id="1_35ais"]
 [ext_resource type="PackedScene" uid="uid://dxay3ypgbkopj" path="res://scenes/player.tscn" id="2_uxbli"]
 [ext_resource type="PackedScene" uid="uid://cyri6gs3mfoo1" path="res://scenes/enemy.tscn" id="3_kck25"]
 [ext_resource type="PackedScene" uid="uid://iifkl3ncdkmy" path="res://scenes/spikes.tscn" id="4_b4vot"]
-[ext_resource type="Script" path="res://scripts/coin.gd" id="5_ds3gp"]
-[ext_resource type="Texture2D" uid="uid://ydbe1tyhvygu" path="res://Sprites/Objects/tile_0151.png" id="5_lrfvy"]
+[ext_resource type="PackedScene" uid="uid://dldurq8f62k8b" path="res://scenes/coin.tscn" id="5_we7hb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ei6qr"]
 texture = ExtResource("1_35ais")
@@ -619,9 +618,6 @@ tile_size = Vector2i(18, 18)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_ei6qr")
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_tramy"]
-radius = 7.07107
-
 [node name="Main" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -641,13 +637,7 @@ position = Vector2(183, -36)
 position = Vector2(315, -25)
 
 [node name="Spikes" parent="." instance=ExtResource("4_b4vot")]
+position = Vector2(132, -45)
 
-[node name="Coin" type="Area2D" parent="."]
-position = Vector2(-38, -15)
-script = ExtResource("5_ds3gp")
-
-[node name="Sprite" type="Sprite2D" parent="Coin"]
-texture = ExtResource("5_lrfvy")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Coin"]
-shape = SubResource("CircleShape2D_tramy")
+[node name="Coin" parent="." instance=ExtResource("5_we7hb")]
+position = Vector2(-32, -15)
