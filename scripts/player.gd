@@ -6,6 +6,8 @@ var gravity : float = 500.0
 
 var score : int = 0
 
+@onready var score_text : Label = get_node("CanvasLayer/ScoreLabel")
+
 func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
@@ -31,3 +33,4 @@ func  game_over():
 
 func add_score (amount):
 	score += amount
+	score_text.text = str("Score : ", score)
