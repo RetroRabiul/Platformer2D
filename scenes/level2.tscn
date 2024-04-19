@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://dvs4rq88jirmj"]
+[gd_scene load_steps=9 format=3 uid="uid://dvs4rq88jirmj"]
 
 [ext_resource type="Texture2D" uid="uid://biwond464pw3f" path="res://Sprites/Tiles/tiles_packed.png" id="1_bknmt"]
 [ext_resource type="PackedScene" uid="uid://dxay3ypgbkopj" path="res://scenes/player.tscn" id="2_fte0j"]
 [ext_resource type="PackedScene" uid="uid://cyri6gs3mfoo1" path="res://scenes/enemy.tscn" id="3_2chos"]
 [ext_resource type="PackedScene" uid="uid://b434o2v334jlk" path="res://scenes/end_flag.tscn" id="4_mv6qj"]
+[ext_resource type="PackedScene" uid="uid://dldurq8f62k8b" path="res://scenes/coin.tscn" id="5_v4skx"]
+[ext_resource type="PackedScene" uid="uid://iifkl3ncdkmy" path="res://scenes/spikes.tscn" id="6_tvcm6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rp8wc"]
 texture = ExtResource("1_bknmt")
@@ -648,10 +650,31 @@ layer_0/tile_data = PackedInt32Array(65535, 1179648, 0, 0, 1179648, 0, 1, 117964
 position = Vector2(-21, -11)
 
 [node name="Enemy2" parent="." instance=ExtResource("3_2chos")]
-position = Vector2(90, -9)
+position = Vector2(151, -11)
 
 [node name="Enemy" parent="." instance=ExtResource("3_2chos")]
 position = Vector2(442, -47)
 
 [node name="EndFlag" parent="." instance=ExtResource("4_mv6qj")]
 position = Vector2(670, -169)
+
+[node name="Enemy3" parent="." instance=ExtResource("3_2chos")]
+position = Vector2(421, -93)
+
+[node name="Coin" parent="." instance=ExtResource("5_v4skx")]
+position = Vector2(90, -10)
+
+[node name="Coin2" parent="." instance=ExtResource("5_v4skx")]
+position = Vector2(201, -10)
+
+[node name="Spikes" parent="." instance=ExtResource("6_tvcm6")]
+position = Vector2(242, -9)
+
+[node name="Spikes2" parent="." instance=ExtResource("6_tvcm6")]
+position = Vector2(296, -27)
+
+[node name="Spikes3" parent="." instance=ExtResource("6_tvcm6")]
+position = Vector2(524, -43)
+
+[node name="Spikes4" parent="." instance=ExtResource("6_tvcm6")]
+position = Vector2(545, -43)
