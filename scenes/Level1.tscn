@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dldurq8f62k8b" path="res://scenes/coin.tscn" id="5_we7hb"]
 [ext_resource type="PackedScene" uid="uid://b434o2v334jlk" path="res://scenes/end_flag.tscn" id="6_xuftv"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ei6qr"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qwgw1"]
 texture = ExtResource("1_35ais")
 texture_region_size = Vector2i(18, 18)
 0:0/0 = 0
@@ -617,7 +617,7 @@ texture_region_size = Vector2i(18, 18)
 [sub_resource type="TileSet" id="TileSet_s7463"]
 tile_size = Vector2i(18, 18)
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_ei6qr")
+sources/0 = SubResource("TileSetAtlasSource_qwgw1")
 
 [node name="Level1" type="Node2D"]
 
@@ -650,3 +650,4 @@ position = Vector2(-24, -13)
 position = Vector2(33, -15)
 
 [node name="EndFlag" parent="." instance=ExtResource("6_xuftv")]
+next_scene = "res://scenes/level2.tscn"
