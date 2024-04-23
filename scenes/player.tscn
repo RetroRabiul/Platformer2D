@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dxay3ypgbkopj"]
+[gd_scene load_steps=7 format=3 uid="uid://dxay3ypgbkopj"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_acfh8"]
-[ext_resource type="Texture2D" uid="uid://c3nvqgsbwhv3a" path="res://Sprites/Characters/character_0004.png" id="2_8pve8"]
+[ext_resource type="Texture2D" uid="uid://c3nvqgsbwhv3a" path="res://assets/Sprites/Characters/character_0004.png" id="2_8pve8"]
+[ext_resource type="FontFile" uid="uid://be1i3646tas1q" path="res://assets/fonts/Comfortaa-VariableFont_wght.ttf" id="3_irjec"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ckgfy"]
 height = 24.0
@@ -10,6 +11,14 @@ height = 24.0
 font_size = 50
 outline_size = 5
 outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j2vav"]
+bg_color = Color(0.0696898, 0.781711, 0.680277, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0.569821, 0.701988, 1)
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_acfh8")
@@ -25,6 +34,7 @@ shape = SubResource("CapsuleShape2D_ckgfy")
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -12)
 zoom = Vector2(3, 3)
+limit_left = 0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -35,3 +45,12 @@ offset_right = 91.0
 offset_bottom = 47.0
 text = "Score : 0"
 label_settings = SubResource("LabelSettings_u35nx")
+
+[node name="SignText" type="RichTextLabel" parent="CanvasLayer"]
+visible = false
+offset_left = 410.0
+offset_top = 249.0
+offset_right = 710.0
+offset_bottom = 349.0
+theme_override_fonts/normal_font = ExtResource("3_irjec")
+theme_override_styles/normal = SubResource("StyleBoxFlat_j2vav")

@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://dvs4rq88jirmj"]
 
-[ext_resource type="Texture2D" uid="uid://biwond464pw3f" path="res://Sprites/Tiles/tiles_packed.png" id="1_bknmt"]
+[ext_resource type="Texture2D" uid="uid://biwond464pw3f" path="res://assets/Sprites/Tiles/tiles_packed.png" id="1_bknmt"]
 [ext_resource type="PackedScene" uid="uid://dxay3ypgbkopj" path="res://scenes/player.tscn" id="2_fte0j"]
 [ext_resource type="PackedScene" uid="uid://cyri6gs3mfoo1" path="res://scenes/enemy.tscn" id="3_2chos"]
 [ext_resource type="PackedScene" uid="uid://b434o2v334jlk" path="res://scenes/end_flag.tscn" id="4_mv6qj"]
