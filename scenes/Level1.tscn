@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://8vlmf5acdexo"]
+[gd_scene load_steps=17 format=3 uid="uid://8vlmf5acdexo"]
 
 [ext_resource type="Texture2D" uid="uid://biwond464pw3f" path="res://assets/Sprites/Tiles/tiles_packed.png" id="1_35ais"]
 [ext_resource type="Texture2D" uid="uid://0xcxl50c8ioi" path="res://assets/Sprites/Tiles/new_tile.png" id="2_kadbj"]
@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://dldurq8f62k8b" path="res://scenes/coin.tscn" id="5_we7hb"]
 [ext_resource type="PackedScene" uid="uid://b434o2v334jlk" path="res://scenes/end_flag.tscn" id="6_xuftv"]
 [ext_resource type="PackedScene" uid="uid://jvn007b3ykuv" path="res://scenes/sign.tscn" id="8_lfbrb"]
+[ext_resource type="PackedScene" uid="uid://bn28s8wvbb4g5" path="res://scenes/cage_key.tscn" id="10_ch0j3"]
+[ext_resource type="PackedScene" uid="uid://b43qre0hgye5w" path="res://scenes/cage.tscn" id="11_h40cr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qwgw1"]
 texture = ExtResource("1_35ais")
@@ -706,13 +708,6 @@ sign_text = "Use space To Jump"
 [node name="Player" parent="." instance=ExtResource("2_uxbli")]
 position = Vector2(48, 442)
 
-[node name="SignText" parent="Player/CanvasLayer" index="1"]
-offset_left = 435.0
-offset_top = 70.0
-offset_right = 735.0
-offset_bottom = 170.0
-theme_override_font_sizes/normal_font_size = 40
-
 [node name="Enemy" parent="." instance=ExtResource("3_kck25")]
 position = Vector2(1034, 435)
 move_dir = Vector2(-80, 0)
@@ -733,4 +728,8 @@ position = Vector2(-43, -12)
 [node name="EndFlag" parent="." instance=ExtResource("6_xuftv")]
 position = Vector2(2291, 120)
 
-[editable path="Player"]
+[node name="CageKey" parent="." instance=ExtResource("10_ch0j3")]
+position = Vector2(132, 470)
+
+[node name="Cage" parent="." instance=ExtResource("11_h40cr")]
+position = Vector2(189, 463)

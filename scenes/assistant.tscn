@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://bligbcv0dkaja"]
+
+[ext_resource type="Texture2D" uid="uid://cp1jm1mrfhhq0" path="res://assets/Sprites/Characters/ufo_helper.png" id="1_ako2h"]
+[ext_resource type="Script" path="res://scripts/assistant.gd" id="1_jchtp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4wswk"]
+radius = 7.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_art1b"]
+radius = 11.0
+
+[node name="Assistant" type="CharacterBody2D"]
+script = ExtResource("1_jchtp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_4wswk")
+
+[node name="UfoHelper" type="Sprite2D" parent="."]
+scale = Vector2(0.385, 0.385)
+texture = ExtResource("1_ako2h")
+
+[node name="KillArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillArea"]
+shape = SubResource("CircleShape2D_art1b")

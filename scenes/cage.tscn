@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://b43qre0hgye5w"]
+
+[ext_resource type="Texture2D" uid="uid://qtyk4b8xpg4b" path="res://assets/Sprites/Objects/Cage.png" id="1_h48da"]
+[ext_resource type="Script" path="res://scripts/cage.gd" id="1_we2vj"]
+[ext_resource type="Texture2D" uid="uid://v6xe87xrr7uw" path="res://assets/Sprites/Objects/CageOpen.png" id="3_ya5bu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_unfqj"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tc8dp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_h48da")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ya5bu")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Cage" type="Area2D"]
+scale = Vector2(1.68, 1.68)
+script = ExtResource("1_we2vj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_unfqj")
+
+[node name="Cage" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_tc8dp")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

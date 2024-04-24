@@ -1,6 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://ku5it1qoyg7i"]
+[gd_scene load_steps=5 format=3 uid="uid://ku5it1qoyg7i"]
 
 [ext_resource type="Script" path="res://scripts/ui.gd" id="1_jlfea"]
+[ext_resource type="FontFile" uid="uid://be1i3646tas1q" path="res://assets/fonts/Comfortaa-VariableFont_wght.ttf" id="2_w5sp3"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3q1p1"]
+font_size = 50
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6ledx"]
+bg_color = Color(0.0696898, 0.781711, 0.680277, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0.569821, 0.701988, 1)
 
 [node name="UI" type="Control"]
 layout_mode = 3
@@ -12,6 +26,20 @@ grow_vertical = 2
 script = ExtResource("1_jlfea")
 
 [node name="ScoreLabel" type="Label" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+auto_translate_mode = 1
+offset_left = 26.0
+offset_top = 24.0
+offset_right = 229.0
+offset_bottom = 93.0
+text = "Score : 0"
+label_settings = SubResource("LabelSettings_3q1p1")
+
+[node name="SignText" type="RichTextLabel" parent="."]
+auto_translate_mode = 1
+visible = false
+offset_left = 410.0
+offset_top = 249.0
+offset_right = 710.0
+offset_bottom = 349.0
+theme_override_fonts/normal_font = ExtResource("2_w5sp3")
+theme_override_styles/normal = SubResource("StyleBoxFlat_6ledx")

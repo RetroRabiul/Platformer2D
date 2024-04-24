@@ -4,13 +4,16 @@ var move_speed : float = 100.0
 var jump_force : float = 250.0
 var gravity : float = 500.0
 
-var score : int = 0
-
-@onready var score_text : Label = get_node("CanvasLayer/ScoreLabel")
+var key_collected = false
+#
+#var score : int = 0
+#
+#@onready var score_text : Label = get_node("CanvasLayer/ScoreLabel")
 
 func _ready():
-	GlobalSignal.show_sign.connect(_show_sign)
-	GlobalSignal.hide_sign.connect(_hide_sign)
+	GlobalSignal.cagekey.connect(CagekeyClct)
+	#GlobalSignal.show_sign.connect(_show_sign)
+	#GlobalSignal.hide_sign.connect(_hide_sign)
 
 func _physics_process(delta):
 	if not is_on_floor():
@@ -37,17 +40,22 @@ func  game_over():
 
 func reload():
 	get_tree().reload_current_scene()
-
-func _show_sign(sign_text):
-	$CanvasLayer/SignText.text += sign_text
-	$CanvasLayer/SignText.visible = true
 	
-
-func _hide_sign():
-	$CanvasLayer/SignText.visible = false
 	
+func CagekeyClct():
+	key_collected = true
+	GlobalSignal.emit_signal("gotkey")
 
-
-func add_score (amount):
-	score += amount
-	score_text.text = str("Score : ", score)
+#func _show_sign(sign_text):
+	#$CanvasLayer/SignText.text += sign_text
+	#$CanvasLayer/SignText.visible = true
+	#
+#
+#func _hide_sign():
+	#$CanvasLayer/SignText.visible = false
+	#
+#
+#
+#func add_score (amount):
+	#score += amount
+	#score_text.text = str("Score : ", score)

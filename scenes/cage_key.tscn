@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bn28s8wvbb4g5"]
+
+[ext_resource type="Script" path="res://scripts/cage_key.gd" id="1_ivygq"]
+[ext_resource type="Texture2D" uid="uid://dp6poaoupuees" path="res://assets/Sprites/Objects/fly_key.png" id="1_sw4uv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_16nly"]
+radius = 9.0
+
+[node name="CageKey" type="Area2D"]
+scale = Vector2(0.67, 0.67)
+script = ExtResource("1_ivygq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_16nly")
+
+[node name="CageKey" type="Sprite2D" parent="."]
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("1_sw4uv")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
