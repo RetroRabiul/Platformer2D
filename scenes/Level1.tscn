@@ -737,6 +737,7 @@ position = Vector2(2291, 120)
 [node name="CageKey" parent="." instance=ExtResource("10_ch0j3")]
 position = Vector2(132, 470)
 
-[node name="Assistant" parent="." node_paths=PackedStringArray("enemies") instance=ExtResource("12_5ks76")]
+[node name="Assistant" parent="." node_paths=PackedStringArray("enemies", "player") instance=ExtResource("12_5ks76")]
 position = Vector2(95, 406)
 enemies = NodePath("../Enemies")
+player = NodePath("../Player")

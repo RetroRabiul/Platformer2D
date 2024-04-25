@@ -10,6 +10,8 @@ radius = 7.0
 radius = 11.0
 
 [node name="Assistant" type="CharacterBody2D" groups=["ufo"]]
+collision_layer = 2
+collision_mask = 0
 script = ExtResource("1_jchtp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

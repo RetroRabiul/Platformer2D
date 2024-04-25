@@ -2,12 +2,13 @@ extends CharacterBody2D
 
 var enemy
 
-var speed = 160.0
-var attack_speed = 250.0
+var speed = 90.0
+var attack_speed = 150.0
 
 var target_position = Vector2.ZERO
 
 var attacking = false
+
 
 #
 #@export var enemies_path: Node2D
@@ -49,21 +50,14 @@ func _ufo_return():
 	attacking = false
 
 func _physics_process(delta):
-	pass
-	#if attacking:
-		#
-		#target_position = (enemy.global_position - global_position).normalized()
-		#
-		#if global_position.distance_to(enemy.global_position) > 2:
-			#move_and_slide(target_position * attack_speed, Vector2.UP)
-			#
-	#else:
-		#var player_pos = Vector2(player.global_position.x,player.global_position.y-20)
-		#
-		#target_position = (player_pos - global_position).normalized()
-		#
-		#if global_position.distance_to(player_pos) > 80:
-			#move_and_slide(target_position * speed, Vector2.UP)
-			#
-		#
-	#
+	if attacking:
+		velocity = global_position.direction_to(enemy.global_position) * attack_speed
+		if global_position.distance_to(enemy.global_position) > 2:
+			move_and_slide()
+	else:
+		var player_pos = Vector2(player.global_position.x,player.global_position.y-40)
+		
+		velocity = global_position.direction_to(player_pos) * speed
+		
+		if global_position.distance_to(player_pos) > 40:
+			move_and_slide()
