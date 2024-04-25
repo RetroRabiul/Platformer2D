@@ -25,3 +25,9 @@ func _process(delta):
 func _on_body_entered(body):
 	if body.is_in_group("Player"):
 		body.game_over()
+
+
+func _on_area_entered(area):
+	if area.is_in_group("ufo"):
+		GlobalSignal.emit_signal("ufo_return")
+		queue_free()

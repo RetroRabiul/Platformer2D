@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://8vlmf5acdexo"]
+[gd_scene load_steps=18 format=3 uid="uid://8vlmf5acdexo"]
 
 [ext_resource type="Texture2D" uid="uid://biwond464pw3f" path="res://assets/Sprites/Tiles/tiles_packed.png" id="1_35ais"]
 [ext_resource type="Texture2D" uid="uid://0xcxl50c8ioi" path="res://assets/Sprites/Tiles/new_tile.png" id="2_kadbj"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://jvn007b3ykuv" path="res://scenes/sign.tscn" id="8_lfbrb"]
 [ext_resource type="PackedScene" uid="uid://bn28s8wvbb4g5" path="res://scenes/cage_key.tscn" id="10_ch0j3"]
 [ext_resource type="PackedScene" uid="uid://b43qre0hgye5w" path="res://scenes/cage.tscn" id="11_h40cr"]
+[ext_resource type="PackedScene" uid="uid://bligbcv0dkaja" path="res://scenes/assistant.tscn" id="12_5ks76"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qwgw1"]
 texture = ExtResource("1_35ais")
@@ -705,14 +706,19 @@ text = "Use A and D to move Left and Right"
 position = Vector2(277, 471)
 sign_text = "Use space To Jump"
 
+[node name="Cage" parent="." instance=ExtResource("11_h40cr")]
+position = Vector2(189, 463)
+
 [node name="Player" parent="." instance=ExtResource("2_uxbli")]
 position = Vector2(48, 442)
 
-[node name="Enemy" parent="." instance=ExtResource("3_kck25")]
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Enemy" parent="Enemies" instance=ExtResource("3_kck25")]
 position = Vector2(1034, 435)
 move_dir = Vector2(-80, 0)
 
-[node name="Enemy2" parent="." instance=ExtResource("3_kck25")]
+[node name="Enemy2" parent="Enemies" instance=ExtResource("3_kck25")]
 position = Vector2(1441, 318)
 move_dir = Vector2(0, -100)
 
@@ -731,5 +737,6 @@ position = Vector2(2291, 120)
 [node name="CageKey" parent="." instance=ExtResource("10_ch0j3")]
 position = Vector2(132, 470)
 
-[node name="Cage" parent="." instance=ExtResource("11_h40cr")]
-position = Vector2(189, 463)
+[node name="Assistant" parent="." node_paths=PackedStringArray("enemies") instance=ExtResource("12_5ks76")]
+position = Vector2(95, 406)
+enemies = NodePath("../Enemies")

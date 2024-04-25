@@ -3,6 +3,8 @@ extends Node
 
 signal gd_collect(amount)
 
+signal ufo_attack()
+signal ufo_return()
 
 signal show_sign(sign_text)
 signal hide_sign()

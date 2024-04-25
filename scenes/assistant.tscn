@@ -9,7 +9,7 @@ radius = 7.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_art1b"]
 radius = 11.0
 
-[node name="Assistant" type="CharacterBody2D"]
+[node name="Assistant" type="CharacterBody2D" groups=["ufo"]]
 script = ExtResource("1_jchtp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

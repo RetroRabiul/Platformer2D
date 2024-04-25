@@ -19,15 +19,8 @@ func _process(delta):
 func _on_area_2d_body_entered(body):
 	if body.is_in_group("Player"):
 		if haveKey and gate_locked :
-			_opening()
 			$Area2D/Cage.play("open")
 			gate_locked = false
 			$CageClosed.set_deferred("disabled", true)
 			print("frame" + str($Area2D/Cage.frame))
 		
-
-func _opening():
-	print("frame" + str($Area2D/Cage.frame))
-	if $Area2D/Cage.frame == 25:
-		$Area2D/Cage.stop("open")
-		print("frame" + str($Area2D/Cage.frame))
