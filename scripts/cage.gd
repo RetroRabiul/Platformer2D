@@ -20,6 +20,7 @@ func _on_area_2d_body_entered(body):
 	if body.is_in_group("Player"):
 		if haveKey and gate_locked :
 			$Area2D/Cage.play("open")
+			GlobalSignal.emit_signal("cage_opened")
 			gate_locked = false
 			$CageClosed.set_deferred("disabled", true)
 			print("frame" + str($Area2D/Cage.frame))
