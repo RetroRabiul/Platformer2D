@@ -27,6 +27,7 @@ script = ExtResource("1_jlfea")
 
 [node name="ScoreLabel" type="Label" parent="."]
 auto_translate_mode = 1
+layout_mode = 0
 offset_left = 26.0
 offset_top = 24.0
 offset_right = 229.0
@@ -37,6 +38,7 @@ label_settings = SubResource("LabelSettings_3q1p1")
 [node name="SignText" type="RichTextLabel" parent="."]
 auto_translate_mode = 1
 visible = false
+layout_mode = 0
 offset_left = 410.0
 offset_top = 249.0
 offset_right = 710.0
