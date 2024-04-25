@@ -13,5 +13,5 @@ func _process(delta):
 
 func _on_body_entered(body):
 	if body.is_in_group("Player"):
-		GlobalSignal.emit_signal("cagekey")
+		GlobalSignal.emit_signal("cage_key")
 		queue_free()

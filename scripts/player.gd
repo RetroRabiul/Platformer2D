@@ -11,7 +11,7 @@ var key_collected = false
 #@onready var score_text : Label = get_node("CanvasLayer/ScoreLabel")
 
 func _ready():
-	GlobalSignal.cagekey.connect(CagekeyClct)
+	GlobalSignal.cage_key.connect(CagekeyClct)
 	#GlobalSignal.show_sign.connect(_show_sign)
 	#GlobalSignal.hide_sign.connect(_hide_sign)
 
@@ -44,7 +44,7 @@ func reload():
 	
 func CagekeyClct():
 	key_collected = true
-	GlobalSignal.emit_signal("gotkey")
+	GlobalSignal.emit_signal("got_key")
 
 #func _show_sign(sign_text):
 	#$CanvasLayer/SignText.text += sign_text
